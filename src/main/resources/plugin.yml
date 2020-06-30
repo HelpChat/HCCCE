@@ -5,3 +5,9 @@ api-version: 1.15.2
 authors: [helpchat]
 description: A community effort
 website: https://helpch.at
+
+commands:
+  # jaims start
+  ping:
+    description: ping
+  # jaims end
