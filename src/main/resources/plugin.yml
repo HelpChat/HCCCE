@@ -11,3 +11,8 @@ commands:
   ping:
     description: ping
   # jaims end
+
+  # kali start
+  online:
+    description: get online player count
+    # kali end
