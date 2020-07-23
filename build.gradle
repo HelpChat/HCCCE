@@ -1,6 +1,6 @@
 plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.3.72'
-    id 'com.github.johnrengelman.shadow' version '6.0.0'
+    id 'me.bristermitten.pdm' version '0.0.1'
 }
 
 group = 'at.helpch'
@@ -31,12 +31,18 @@ dependencies {
     compileOnly 'me.clip:placeholderapi:2.10.6'
     //katsumag - end
     //BM start
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.72"
+    pdm "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.72"
 }
 
 compileKotlin {
     kotlinOptions.jvmTarget = "1.8"
 }//BM end
+
+pdm {
+    version = '0.0.1-SNAPSHOT' //uses a slightly newer version of the runtime because Gradle Plugin Publishing is a bitch
+}
+
+jar.dependsOn project.tasks.getByName('pdm')
 
 import org.apache.tools.ant.filters.ReplaceTokens
 
