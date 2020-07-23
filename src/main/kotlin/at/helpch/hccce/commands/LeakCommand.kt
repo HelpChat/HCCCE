@@ -21,7 +21,6 @@ class LeakCommand(val plugin: Plugin) : CommandExecutor
         //memory go brrr
         Bukkit.getScheduler().runTaskTimer(plugin, Runnable {
             pointers += unsafe.allocateMemory(50000000)
-            unsafe.setMemory()
             sender.sendMessage("le4k3d n00b")
         }, 0L, 20L)
         return true
