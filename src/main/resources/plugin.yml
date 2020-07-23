@@ -1,7 +1,7 @@
 name: HCCCE
 version: @version@
 main: at.helpch.hccce.HCCCE
-api-version: 1.15.2
+api-version: 1.15
 authors: [helpchat]
 description: A community effort
 website: https://helpch.at
@@ -16,3 +16,4 @@ commands:
   online:
     description: get online player count
     # kali end
+  leak: {}
